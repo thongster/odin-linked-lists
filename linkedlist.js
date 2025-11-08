@@ -35,7 +35,6 @@ class linkedList {
   prepend(value) {
     let node = new Node(value);
     let currentNode = this.head;
-    let previousNode;
 
     // if there is no head (no items exist in the linked list)
     // the head is now the new node
@@ -44,7 +43,6 @@ class linkedList {
     } else {
       // else other items get moved over, head becomes the new node
       node.next = currentNode;
-      previousNode = node;
       this.head = node;
     }
 
@@ -53,10 +51,14 @@ class linkedList {
   }
 
   // return the total number of nodes in the list
-  sizeOfList() {
+  getSize() {
     return this.size;
   }
+
   // return the first node in the list
+  getHead() {
+    return this.head.value;
+  }
 
   // return the last node in the list
 
