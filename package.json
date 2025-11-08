@@ -1,6 +1,7 @@
 {
   "name": "odin-linked-lists",
   "version": "1.0.0",
+  "type": "module",
   "description": "Project: Linked Lists from The Odin Project's Javascript course",
   "main": "index.js",
   "scripts": {
