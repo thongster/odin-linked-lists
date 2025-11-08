@@ -130,7 +130,24 @@ class linkedList {
   }
 
   // return index of node containing value, or null if not found
+  find(value) {
+    let index = 0
+    let currentNode = this.head
 
+    if (currentNode.value === value) {
+        return index
+    }
+
+    while (currentNode.next) {
+        currentNode = currentNode.next
+        index++
+        if (currentNode.value === value) {
+            return index
+        }
+    }
+
+    return null
+  }
   // return all nodes as a string
 
   // insert node containing value at given index

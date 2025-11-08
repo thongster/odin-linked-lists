@@ -20,3 +20,7 @@ console.dir(list, { depth: null });
 console.log(list.contains(100))
 console.log(list.contains(400))
 console.log(list.contains(500))
+console.log(list.find(2000))
+console.log(list.find(300))
+console.log(list.find(400))
+console.log(list.find(500))
