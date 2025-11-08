@@ -62,27 +62,27 @@ class linkedList {
 
   // return the last node in the list
   getTail() {
-    let currentNode = this.head
+    let currentNode = this.head;
     // while node.next exists, move to next
     while (currentNode.next) {
-        currentNode = currentNode.next
+      currentNode = currentNode.next;
     }
 
     // once there is no next node, return value (last node)
-    return currentNode.value
+    return currentNode.value;
   }
 
   // return the node at a given index
   getValueAtIndex(index) {
-    let count = -1
+    let count = -1;
     let currentNode = this.head;
 
     while (count < index) {
-        currentNode = currentNode.next
-        count++
+      currentNode = currentNode.next;
+      count++;
     }
 
-    return currentNode.value
+    return currentNode.value;
   }
 
   // removes the last element from the list
@@ -91,24 +91,24 @@ class linkedList {
 
     // if list is empty
     if (!currentNode) {
-        return null
+      return null;
     }
 
     // if list only has 1 element
     if (!currentNode.next) {
-        this.head = null
-        this.size--
-        return;
+      this.head = null;
+      this.size--;
+      return;
     }
 
     // keep moving through list if next next node exists
     while (currentNode.next.next) {
-        currentNode = currentNode.next
+      currentNode = currentNode.next;
     }
 
     // once there is no next next node, make next node null
     currentNode.next = null;
-    this.size--
+    this.size--;
   }
 
   // return true list contains value, otherwise return false
@@ -116,39 +116,64 @@ class linkedList {
     let currentNode = this.head;
 
     if (currentNode.value === value) {
-        return true
+      return true;
     }
 
     while (currentNode.next) {
-        currentNode = currentNode.next
-        if (currentNode.value === value) {
-            return true
-        }
+      currentNode = currentNode.next;
+      if (currentNode.value === value) {
+        return true;
+      }
     }
 
-    return false
+    return false;
   }
 
   // return index of node containing value, or null if not found
   find(value) {
-    let index = 0
-    let currentNode = this.head
+    let index = 0;
+    let currentNode = this.head;
 
+    // if the first node value is the one we are looking for, return the index
     if (currentNode.value === value) {
-        return index
+      return index;
+    }
+
+    // while there are more nodes, loop through
+    // check to see if values are same and iterate index
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+      index++;
+      if (currentNode.value === value) {
+        return index;
+      }
+    }
+
+    // if nothing matches, return null
+    return null;
+  }
+
+  // return all nodes as a string
+  toString() {
+    let currentNode = this.head;
+    let string = '';
+
+    if (currentNode) {
+      string = `( ${currentNode.value} )`;
     }
 
     while (currentNode.next) {
-        currentNode = currentNode.next
-        index++
-        if (currentNode.value === value) {
-            return index
-        }
+      currentNode = currentNode.next;
+      string = string + ' ' + '->' + ' ' + `( ${currentNode.value} )`;
     }
 
-    return null
+    if (!currentNode.next) {
+      currentNode.next = null;
+      string = string + ' ' + '->' + ' ' + currentNode.next;
+    }
+
+    return string;
   }
-  // return all nodes as a string
 
   // insert node containing value at given index
 
