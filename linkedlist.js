@@ -86,6 +86,30 @@ class linkedList {
   }
 
   // removes the last element from the list
+  pop() {
+    let currentNode = this.head;
+
+    // if list is empty
+    if (!currentNode) {
+        return null
+    }
+
+    // if list only has 1 element
+    if (!currentNode.next) {
+        this.head = null
+        this.size--
+        return;
+    }
+
+    // keep moving through list if next next node exists
+    while (currentNode.next.next) {
+        currentNode = currentNode.next
+    }
+
+    // once there is no next next node, make next node null
+    currentNode.next = null;
+    this.size--
+  }
 
   // return true list contains value, otherwise return false
 

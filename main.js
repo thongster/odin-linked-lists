@@ -14,4 +14,6 @@ console.log(`this is the size: ${list.getSize()}`);
 console.log(`this is the head: ${list.getHead()}`);
 console.log(`this is the tail: ${list.getTail()}`)
 console.log(`this is the value at index 2: ${list.getValueAtIndex(2)}`)
+list.pop()
+console.dir(list, { depth: null });
 console.log('im in here');
