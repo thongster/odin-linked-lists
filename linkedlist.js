@@ -53,7 +53,9 @@ class linkedList {
   }
 
   // return the total number of nodes in the list
-
+  sizeOfList() {
+    return this.size;
+  }
   // return the first node in the list
 
   // return the last node in the list
