@@ -61,8 +61,21 @@ class linkedList {
   }
 
   // return the last node in the list
+  getTail() {
+    let currentNode = this.head
+    // while node.next exists, move to next
+    while (currentNode.next) {
+        currentNode = currentNode.next
+    }
+
+    // once there is no next node, return value (last node)
+    return currentNode.value
+  }
 
   // return the node at a given index
+  getAtIndex(index) {
+    
+  }
 
   // removes the last element from the list
 

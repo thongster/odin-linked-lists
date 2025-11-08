@@ -9,7 +9,8 @@ list.append(300);
 list.append(400);
 list.prepend(1000);
 list.prepend(2000);
-console.log(`this is the size of the list: ${list.getSize()}`);
-console.log(`this is the head of the list: ${list.getHead()}`);
 console.dir(list, { depth: null });
+console.log(`this is the size: ${list.getSize()}`);
+console.log(`this is the head: ${list.getHead()}`);
+console.log(`this is the tail: ${list.getTail()}`)
 console.log('im in here');
