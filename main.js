@@ -7,6 +7,7 @@ list.append(100);
 list.append(200);
 list.append(300);
 list.append(400);
+list.append(500);
 list.prepend(1000);
 list.prepend(2000);
 console.dir(list, { depth: null });
@@ -16,4 +17,6 @@ console.log(`this is the tail: ${list.getTail()}`)
 console.log(`this is the value at index 2: ${list.getValueAtIndex(2)}`)
 list.pop()
 console.dir(list, { depth: null });
-console.log('im in here');
+console.log(list.contains(100))
+console.log(list.contains(400))
+console.log(list.contains(500))
