@@ -73,8 +73,16 @@ class linkedList {
   }
 
   // return the node at a given index
-  getAtIndex(index) {
-    
+  getValueAtIndex(index) {
+    let count = -1
+    let currentNode = this.head;
+
+    while (count < index) {
+        currentNode = currentNode.next
+        count++
+    }
+
+    return currentNode.value
   }
 
   // removes the last element from the list
