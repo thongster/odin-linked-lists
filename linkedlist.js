@@ -174,10 +174,6 @@ class linkedList {
 
     return string;
   }
-
-  // insert node containing value at given index
-
-  // remove node at a given index
 }
 
 export default linkedList;

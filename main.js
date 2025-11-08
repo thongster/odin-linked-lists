@@ -32,4 +32,6 @@ list.append('parrot');
 list.append('hamster');
 list.append('snake');
 list.append('turtle');
+list.insertAt('alligator', 1);
+console.dir(list, { depth: null });
 console.log(list.toString());
